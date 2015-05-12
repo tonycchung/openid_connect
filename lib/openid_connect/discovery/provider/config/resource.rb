@@ -15,7 +15,8 @@ module OpenIDConnect
           end
 
           def endpoint
-            SWD.url_builder.build [nil, host, port, path, nil, nil]
+            # SWD.url_builder.build [nil, host, port, path, nil, nil]
+            URI::HTTP.build({:host=>@host, :port=>@port, :path=>@path})
           rescue URI::Error => e
             raise SWD::Exception.new(e.message)
           end
