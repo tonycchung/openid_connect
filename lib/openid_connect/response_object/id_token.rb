@@ -1,4 +1,4 @@
-require 'json/jwt'
+  require 'json/jwt'
 
 module OpenIDConnect
   class ResponseObject
